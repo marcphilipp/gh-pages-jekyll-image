@@ -22,6 +22,7 @@ jobs:
       with:
         images: ghcr.io/marcphilipp/gh-pages-jekyll
         tags: |
+          type=raw,value=latest,enable={{is_default_branch}}
           type=sha
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v2
